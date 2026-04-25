@@ -1,65 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adopcion</title>
-    <style>
-        body{
-            
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Argentino </title>
 </head>
 <body>
+ 
+  <!-- ===================== ENCABEZADO PRINCIPAL ===================== -->
+  <header>
+    <h1>Rock Argentino </h1>
+    <h2>El ranking definitivo del rock nacional y todo su merchandising<h2>
+  </header>
+ 
+  <!-- ===================== NAVEGACIÓN ===================== -->
+  <nav>
+    <ul>
+      <li><a href="index.html"> Inicio</a></li>
+      <li><a href="info.html"> Ranking &amp; Info</a></li>
+      <li><a href="contacto.html"> Contacto</a></li>
+    </ul>
+  </nav>
+  <!-- INTRODUCCIÓN -->
+    <section>
+      <h2>Contacto y Registro</h2>
+      <p>Completá el formulario para unirte a la comunidad.</p>
+    </section>
+
+ 
+  <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
+
+ 
+  <main>
+    <!-- ↓↓↓ EL FORMULARIO VA ACÁ, DENTRO DEL MAIN ↓↓↓ -->
+    <section>
+      <h2>Formulario de Registro</h2>
+
+      <form method="POST" action="">
+
+        <fieldset>
+          <legend>Datos Personales</legend>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje"></textarea>
+          <label for="banda">Banda favorita:</label>
+          <select id="banda" name="banda">
+            <option value="soda">Soda Stereo</option>
+            <option value="redondos">Los Redondos</option>
+            <option value="divididos">Divididos</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Época favorita</legend>
+          <input type="radio" id="epoca-80" name="epoca" value="80s">
+          <label for="epoca-80">Años 80</label>
+          <input type="radio" id="epoca-90" name="epoca" value="90s">
+          <label for="epoca-90">Años 90</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Merch de interés</legend>
+          <input type="checkbox" id="remera" name="merch[]" value="remera">
+          <label for="remera">Remeras</label>
+          <input type="checkbox" id="vinilo" name="merch[]" value="vinilo">
+          <label for="vinilo">Vinilos</label>
+          <input type="checkbox" id="poster" name="merch[]" value="poster">
+          <label for="poster">Posters</label>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+
+      </form>
+
+    </section>
+    <!-- ↑↑↑ FIN DEL FORMULARIO ↑↑↑ -->
+    <!-- Sección de bienvenida -->
+    <section id="bienvenida">
+      <h2>¿De qué trata este sitio?</h2>
+      <p>
+        Bienvenido al sitio dedicado al <strong>rock argentino</strong>, uno de los géneros musicales
+        más importantes y apasionantes de América Latina. Aquí encontrarás el top de las bandas y artistas
+        más influyentes de la historia del rock nacional, junto con información sobre su
+        <strong>merchandising oficial</strong>: remeras, discos, posters y mucho más.
+      </p>
+      <p>
+        Desde los años 60 hasta hoy, el rock argentino ha dado al mundo artistas únicos como
+        <em>Soda Stereo</em>, <em>Divididos</em>, <em>Los Redondos</em> y <em>Spinetta</em>.
+        Este sitio es un homenaje a esa cultura que sigue viva en cada recital, en cada vinilo
+        y en cada remera que se pone un fanático.
+      </p>
+    </section>
+ 
+    <!-- Sección del top 5 -->
+    <section id="top5">
+      <h2>Top 5 Bandas &amp; Artistas</h2>
+      <p>A continuación, las 5 bandas y solistas más icónicos del rock argentino según su impacto cultural, discografía y legado.</p>
+ 
+      <!-- Artista 1 -->
+      <article>
+        <h3>1. Soda Stereo</h3>
+        <p>
+          Formada en 1982, <strong>Soda Stereo</strong> es considerada la banda de rock más importante
+          en habla hispana. Liderada por <em>Gustavo Cerati</em>, dejó un legado musical incomparable
+          con álbumes como <em>Signos</em> y <em>Doble Vida</em>.
+        </p>
+        <!-- Imagen representativa -->
+       
+          <img src="./../soda-stereo.jpg" alt="Soda Stereo - banda de rock argentino" width="400">
+        >
+        <!-- Enlace externo a nueva pestaña -->
+        <p>
+          <a href="https://open.spotify.com/intl-es/artist/7An4yvF7hDYDolN4m5zKBp?si=y7-f5t6AQqOF0X078cxGKA">
+            🎵 Escuchar en Spotify
+          </a>
+        </p>
+      </article>
+ 
+      <!-- Artista 2 -->
+      <article>
+        <h3>2. Patricio Rey y sus Redonditos de Ricota</h3>
+        <p>
+          <strong>Los Redondos</strong>, liderados por el <em>Indio Solari</em> y <em>Skay Beilinson</em>,
+          son un fenómeno social y musical sin precedentes. Sus recitales convocaban multitudes de más
+          de 100.000 personas y su culto sigue vigente décadas después.
+        </p>
+        <!-- Imagen representativa -->
+       
+          <img src="./../PRYRR.jpg" alt="Soda Stereo - banda de rock argentino" width="400">
+        >
+      </article>
+ 
+      <!-- Artista 3 -->
+      <article>
+        <h3>3. Divididos</h3>
+        <p>
+          <strong>Divididos</strong> con <em>Ricardo Mollo</em> a la guitarra es sinónimo de potencia
+          y creatividad. Surgidos de las cenizas de Sumo, llevan más de 30 años siendo referentes
+          del rock pesado nacional.
+        </p>
+        <img src="./../DIV.png" alt="Soda Stereo - banda de rock argentino" width="400">
+      </article>
+ 
+     
+    </section>
+ 
+    <!-- Sección merch destacada -->
+    <section id="merch">
+      <h2>Merch Destacado</h2>
+      <p>
+        El merchandising del rock argentino es parte de la identidad de cada fan. Remeras,
+        buzos, bolsos, discos de vinilo y posters son los artículos más buscados.
+        Visitá nuestra sección de <a href="info.html#tabla-merch">información de merch</a> para
+        ver precios y disponibilidad.
+      </p>
+ 
+      <!-- Enlace ancla interno a sección bienvenida -->
+      <p><a href="#bienvenida">↑ Volver al inicio de la página</a></p>
+    </section>
+     <!-- Formulario con method POST y action vacío -->
+
+    <!-- Video de YouTube incrustado -->
+    <section id="video">
+      <h2>Video Destacado</h2>
+      <p>Uno de los recitales más icónicos del rock argentino:</p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/3rBOgCWHXTE"
+        title="Soda Stereo - Me Verás Volver (Video Oficial)"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </section>
+ 
+  </main>
+ 
+  <!-- ===================== PIE DE PÁGINA ===================== -->
+  <footer>
+    <hr>
+    <p> AUTORES: KEVIN ZALAZAR, DAVID SUYO</p>
     
-    <center>
-        <div>
-
-            
-            <h1>Mascotas en Adopcion</h1>
-            <hr>
-        <header>    
-            <p >La adopcion de animales es una forma maravillosa de brindar un hogar a mascotas necesitadas y cambiar sus vidas para siempre</p>
-            <img src="https://media.istockphoto.com/id/1276446949/photo/corgi-dog-sitting-on-the-side-of-the-road-on-an-old-suitcase-with-a-sign-around-his-neck.jpg?s=612x612&w=0&k=20&c=udFneOrwXV1Ip_LtH-N1zc-yZhSmQAiYq98WHFZzqS4=" alt = "imagenperros" style="width: 500px;height: 300px;">
-            <h2>Beneficios para el animal y la sociedad Adoptar una mascota significa darle una segunda oportunidad a un animal que ha sido abandonado o maltratado, evitando que permanezca en refugios donde muchos podrían ser sacrificados por falta de espacio o recursos. Además, al adoptar, se reduce la demanda de compra en criaderos, que a menudo someten a los animales a condiciones de maltrato. La adopción contribuye a combatir la sobrepoblación animal y promueve una cultura de responsabilidad y cuidado hacia los seres vivos.</h2>
-            
-        </div>
-        <hr>
-        <div>
-            <h3>¿Como debo hacerlo?</h3>
-            <img src="https://tse1.explicit.bing.net/th/id/OIP.OtIthh_WH1xTTjhNRWXiAQAAAA?pid=ImgDet&w=150&h=150&c=7&o=7&rm=3" alt = "imagenperros" style="width: 400px;height: 250px;">
-        </div>
-    </center>
-        <div>
-            <dl>
-                <dt>Buscar Mascotas:</dt>
-                <dd>- Puedes buscar perros, gatos y otras mascotas en adopción a través de plataformas en línea que conectan refugios con adoptantes. Puedes filtrar por especie, raza, tamaño y edad para encontrar la mascota que mejor se adapte a ti.</dd>
-                <dt>Formulario de Adopción:</dt>
-                <dd>- Una vez que encuentres una mascota que te interese, deberás completar un formulario con tus datos y algunas preguntas sobre tu hogar y estilo de vida. Esto ayuda a asegurar que la adopción sea adecuada para el animal.</dd>
-                <dt>Visita al Refurio:</dt>
-                <dd>- En algunos casos, se programará una visita a tu hogar para asegurarse de que el entorno sea seguro para la mascota. También se puede requerir una donación para ayudar a cubrir los costos de cuidado de los animales rescatados. </dd>
-                <dt>Compromiso de Cuidado:</dt>
-                <dd>- Al adoptar, te comprometes a cuidar de la mascota por el resto de su vida. Esto incluye proporcionar atención veterinaria, alimentación adecuada y un ambiente seguro y amoroso.</dd>
-            </dl>
-        </div>
-    <center>
-        <h2>¿Listo Para Adoptar?</h2>
-        <img src="https://th.bing.com/th/id/OIP.ObbmpoVyjF2Pb2peb0yCbQHaG1?w=198&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="imggato" style="width:400px;height: 250px;">
-        <br>
-        <br>
-        <a href="https://municipalidadsalta.gob.ar/bienestar-animal-7/adopciones/" target="_blank">Entra Aqui Para Comnzar Adoptar</a>
-    </center>
-        </div>
-        <a href="./assets/"></a>
-        <br>
-        <br>
-    <center>
-        <video width="400" height="300" controls loop autoplay>
-            <source src="./assets/videoplayback (1).mp4" type="video/mp4">
-        </video>
-    </center>      
-        
-
+  </footer>
+ 
 </body>
-
 </html>
