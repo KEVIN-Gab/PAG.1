@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto &amp; Membresía — Rock Argentino</title>
+</head>
+<body>
+ 
+
+  <header>
+    <h1>MIEMBRO</h1>
+    <p><em>POSIBLES INTERESES </em></p>
+  </header>
+ 
+<nav>
+  <ul>
+    <li><a href="index.2h.html">ROCK ARG</a></li>
+    
+  </ul>
+</nav>
+  <main>
+ 
+    <section id="intro">
+      <h2>Hacete Miembro de tu Banda Favorita</h2>
+      <p>
+        ¿Sos fanático del rock ? Registrate como miembro oficial de la comunidad
+        de tu banda favorita. Vas a recibir <strong>novedades exclusivas</strong>, preventas
+        de entradas, descuentos en merchandising y acceso anticipado a lanzamientos.
+      </p>
+      <p>
+        Completá el formulario con tus datos y elegí la banda a la que querés pertenecer.
+        <em>La membresía es completamente gratuita.</em>
+      </p>
+    </section>
+ 
+
+     <form method="POST" action="">
+
+        <fieldset>
+          <legend>Datos Personales</legend>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje"></textarea>
+          <label for="banda">Banda favorita:</label>
+          <select id="banda" name="banda">
+            <option value="the beathles">the beathles</option>
+            <option value="nirvana">nirvana</option>
+            <option value=""></option>
+            <option value="">Soda Stereo</option>
+            <option value="">Soda Stereo</option>
+            <option value="">Soda Stereo</option>
+            <option value="redondos">Los Redondos</option>
+            <option value="divididos">Divididos</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Época favorita</legend>  
+          <label type="radio" id="epoca-70" name="epoca" value="70s">
+          <label for="epoca-80">Años 70</label>
+          <input type="radio" id="epoca-80" name="epoca" value="80s">
+          <label for="epoca-80">Años 80</label>
+          <input type="radio" id="epoca-90" name="epoca" value="90s">
+          <label for="epoca-90">Años 90</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Merch de interés</legend>
+          <input type="checkbox" id="remera" name="merch[]" value="remera">
+          <label for="remera">Remeras</label>
+          <input type="checkbox" id="vinilo" name="merch[]" value="vinilo">
+          <label for="vinilo">Vinilos</label>
+          <input type="checkbox" id="poster" name="merch[]" value="poster">
+          <label for="poster">Posters</label>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+
+      </form>
+ 
+          <div>
+            <label for="como-conociste">¿Cómo nos conociste?</label><br>
+            <select id="como-conociste" name="como_conociste">
+              <option value="">-- Seleccioná una opción --</option>
+              <option value="redes">Redes sociales</option>
+              <option value="amigo">Me lo recomendó un amigo</option>
+              <option value="google">Búsqueda en Google</option>
+              <option value="recital">En un recital</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+ 
+        </fieldset>
+ 
+        <br>
+ 
+        <fieldset>
+          <legend>✅ Confirmación</legend>
+ 
+          <input type="checkbox" id="acepto" name="acepto" value="si" required>
+          <label for="acepto">
+            Acepto los términos y condiciones de la membresía y autorizo el uso
+            de mis datos para recibir información relacionada con la banda elegida.
+          </label>
+          <br><br>
+ 
+          <input type="checkbox" id="mayor" name="mayor" value="si">
+          <label for="mayor">Declaro ser mayor de 13 años.</label>
+ 
+        </fieldset>
+ 
+        <br>
+ 
+        <!-- Botones submit y reset -->
+        <div>
+          <input type="submit" value="✅ Registrarme como Miembro">
+          &nbsp;&nbsp;
+          <input type="reset" value="🗑️ Limpiar formulario">
+        </div>
+
+
+  </main>
+ 
+  <footer>
+    <hr>
+ 
+    <p>Autores: Kevin Zalazar, David Suyo</p>
+   
+  </footer>
+ 
+</body>
+</html>
