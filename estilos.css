@@ -1,0 +1,413 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+
+
+:root {
+  --azul-profundo:   #0a1628;
+  --azul-medio:      #0d2b55;
+  --azul-fuerte:     #1a4a8a;
+  --celeste-vivo:    #2d8fc4;
+  --celeste-claro:   #6ec6e8;
+  --celeste-niebla:  #b3dff0;
+  --blanco:          #f0f7ff;
+  --acento:          #00d4ff;
+
+  --radio:           6px;
+  --sombra-bloque:   0 4px 24px rgba(0,100,180,0.25);
+  --sombra-input:    0 2px 8px rgba(0,150,220,0.15);
+}
+
+/* ── Reset base ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--blanco);
+
+  /* fondo: degradado azul difuminado en capas */
+  background:
+    radial-gradient(ellipse 120% 60% at 70% 10%,  rgba(45,143,196,0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 80%  80% at 10% 80%,  rgba(26, 74,138,0.50) 0%, transparent 65%),
+    linear-gradient(160deg, var(--azul-profundo) 0%, var(--azul-medio) 50%, #0a2240 100%);
+}
+
+/* ── GRID PRINCIPAL ─────────────────────────── */
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+/* ── HEADER ─────────────────────────────────── */
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 3rem 1.2rem;
+  border-bottom: 1px solid rgba(110,198,232,0.3);
+  background: rgba(10,22,40,0.6);
+  backdrop-filter: blur(8px);
+}
+
+header .title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  letter-spacing: 0.12em;
+  color: var(--acento);
+  text-shadow: 0 0 30px rgba;
+  line-height: 1;
+}
+
+header .color {
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--acento), var(--celeste-claro), transparent);
+  align-self: end;
+  margin-bottom: 0.6rem;
+}
+
+header .sub {
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: var(--celeste-niebla);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+nav {
+  grid-area: nav;
+  padding: 0.6rem 3rem;
+  background: rgba(13,43,85,0.7);
+  border-bottom: 1px solid rgba(29, 43, 82, 0.399);
+}
+
+nav ul { list-style: none; display: flex; gap: 2rem; }
+
+nav a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  color: var(--celeste-claro);
+  text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+nav a:hover {
+  color: var(--acento);
+  text-shadow: 0 0 10px rgb(115, 199, 215);
+}
+
+/* ── MAIN GRID ───────────────────────────────── */
+main {
+  grid-area: main;
+  padding: 2.5rem 3rem 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "intro    intro"
+    "extras   formulario";
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ── BLOQUE: INTRO ───────────────────────────── */
+#intro {
+  grid-area: intro;
+  background: linear-gradient(135deg, rgba(26,74,138,0.55) 0%, rgba(13,43,85,0.55) 100%);
+  border: 1px solid rgba(110,198,232,0.3);
+  border-radius: var(--radio);
+  padding: 1.8rem 2rem;
+  box-shadow: var(--sombra-bloque);
+  backdrop-filter: blur(4px);
+}
+
+#intro h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: 0.08em;
+  color: var(--acento);
+  margin-bottom: 0.8rem;
+}
+
+#intro p { 
+  line-height: 1.7; 
+  color: var(--celeste-niebla); 
+  margin-bottom: 0.6rem; 
+}
+
+#intro p:last-child { margin-bottom: 0; }
+
+#intro strong { color: var(--celeste-vivo); font-weight: 600; }
+#intro em     { color: var(--acento); font-style: italic; }
+
+/* ── BLOQUE: EXTRAS (selects/checks sueltos) ── */
+/* todo lo que está fuera del form se reagrupa aquí visualmente */
+.extras-bloque {
+  grid-area: extras;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── BLOQUE: FORMULARIO ──────────────────────── */
+form {
+  grid-area: formulario;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* ── FIELDSET — bloque visual ────────────────── */
+fieldset {
+  border: 1px solid rgba(110,198,232,0.35);
+  border-radius: var(--radio);
+  padding: 1.5rem 1.8rem;
+  background: linear-gradient(135deg, rgba(13,43,85,0.6) 0%, rgba(10,22,40,0.6) 100%);
+  box-shadow: var(--sombra-bloque);
+  backdrop-filter: blur(4px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.4rem;
+  align-items: center;
+}
+
+legend {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  color: var(--acento);
+  padding: 0 0.6rem;
+  grid-column: 1 / -1;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(0,212,255,0.25);
+  padding-bottom: 0.4rem;
+  width: 100%;
+}
+
+/* ── Labels ──────────────────────────────────── */
+label {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  color: var(--celeste-niebla);
+  text-transform: uppercase;
+  align-self: center;
+}
+
+/* Labels de radio/checkbox: no uppercase full-width */
+fieldset label[for="epoca-80"],
+fieldset label[for="epoca-90"],
+fieldset label[for="remera"],
+fieldset label[for="vinilo"],
+fieldset label[for="poster"],
+fieldset label[for="acepto"],
+fieldset label[for="mayor"] {
+  text-transform: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  color: var(--blanco);
+}
+
+/* ── Inputs / textarea / select ──────────────── */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radio);
+  border: 1px solid rgba(110,198,232,0.4);
+  background: rgba(10,30,60,0.7);
+  color: var(--blanco);
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  box-shadow: var(--sombra-input);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--acento);
+  box-shadow: 0 0 0 3px rgba(0,212,255,0.2);
+}
+
+select option { background: var(--azul-profundo); }
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+  grid-column: 1 / -1;
+}
+
+/* textarea y select de banda ocupan columna completa */
+select#banda { grid-column: 1 / -1; }
+
+/* pares label+input ocupan cada uno su columna */
+fieldset label[for="nombre"] { grid-column: 1; }
+fieldset input#nombre        { grid-column: 1; }
+fieldset label[for="email"]  { grid-column: 2; }
+fieldset input#email         { grid-column: 2; }
+fieldset label[for="password"]{ grid-column: 1; }
+fieldset input#password       { grid-column: 1; }
+fieldset label[for="mensaje"] { grid-column: 1 / -1; }
+
+fieldset label[for="banda"]  { grid-column: 1 / -1; }
+
+/* ── Radios y Checkboxes ─────────────────────── */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--acento);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+/* fieldset época: columnas radio+label */
+fieldset:nth-of-type(2) {
+  grid-template-columns: auto 1fr auto 1fr auto 1fr;
+}
+
+/* fieldset merch: radio/checkbox en línea */
+fieldset:nth-of-type(3) {
+  grid-template-columns: auto 1fr auto 1fr auto 1fr;
+}
+
+/* ── Botones submit / reset ──────────────────── */
+input[type="submit"],
+input[type="reset"] {
+  padding: 0.75rem 2rem;
+  border-radius: var(--radio);
+  border: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+input[type="submit"] {
+  background: linear-gradient(135deg, var(--celeste-vivo), var(--azul-fuerte));
+  color: var(--blanco);
+  box-shadow: 0 4px 20px rgba(0,212,255,0.35);
+}
+
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(0,212,255,0.55);
+}
+
+input[type="reset"] {
+  background: transparent;
+  border: 1px solid rgba(110,198,232,0.5);
+  color: var(--celeste-claro);
+}
+
+input[type="reset"]:hover {
+  background: rgba(110,198,232,0.1);
+  transform: translateY(-1px);
+}
+
+/* contenedor de botones dentro del form */
+form > div:last-child {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ── BLOQUE EXTRAS (fuera del form) ──────────── */
+.bloque-extra {
+  background: linear-gradient(135deg, rgba(13,43,85,0.6), rgba(10,22,40,0.6));
+  border: 1px solid rgba(110,198,232,0.3);
+  border-radius: var(--radio);
+  padding: 1.4rem 1.6rem;
+  box-shadow: var(--sombra-bloque);
+  backdrop-filter: blur(4px);
+  display: grid;
+  gap: 0.7rem;
+}
+
+.bloque-extra legend,
+.bloque-extra .bloque-titulo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  color: var(--acento);
+  border-bottom: 1px solid rgba(0,212,255,0.25);
+  padding-bottom: 0.4rem;
+}
+
+.bloque-extra label {
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--celeste-niebla);
+  text-transform: uppercase;
+}
+
+/* ── FOOTER ──────────────────────────────────── */
+footer {
+  grid-area: footer;
+  padding: 1.2rem 3rem;
+  background: rgba(10,22,40,0.8);
+  border-top: 1px solid rgba(110,198,232,0.2);
+  color: var(--celeste-niebla);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+}
+
+footer hr { display: none; }
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 780px) {
+  header { grid-template-columns: 1fr; padding: 1.5rem 1.5rem 1rem; }
+  nav    { padding: 0.5rem 1.5rem; }
+
+  main {
+    padding: 1.5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "formulario"
+      "extras";
+  }
+
+  fieldset { grid-template-columns: 1fr; }
+  fieldset:nth-of-type(2),
+  fieldset:nth-of-type(3) { grid-template-columns: auto 1fr auto 1fr; }
+
+  fieldset label[for="nombre"],
+  fieldset input#nombre,
+  fieldset label[for="email"],
+  fieldset input#email,
+  fieldset label[for="password"],
+  fieldset input#password { grid-column: 1 / -1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
