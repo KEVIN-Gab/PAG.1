@@ -1,0 +1,103 @@
+.inicio  { 
+    color: rgb(255, 255, 255);
+}
+
+.intro {
+
+    color: rgb(255, 255, 255);
+
+}
+.link {
+    color: rgb(205, 50, 63);
+}
+
+.boton1 {
+    background-color: rgb(62, 55, 107);
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+    
+}
+
+.boton2 {
+    background-color: rgb(62, 55, 107);
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+    
+}
+
+.boton3 {
+    background-color: rgb(62, 55, 107);
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6);
+    
+}
+
+.texto{
+    color: rgb(255, 255, 255);
+}
+
+.text-center {
+    color: rgb(253, 253, 253);
+}
+
+.miembros {
+    color: rgb(255, 255, 255);
+
+}
+
+.integrantes{
+
+    color: aliceblue;
+}
+
+.header-button {
+    height: 150px;
+    width: 500px;
+    border-radius: 100px;
+    background-color: white;
+}
+
+.link{
+    height: 150px;
+    width: 100px;
+    border-radius: 10px;
+
+}
+
+.tabla {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.tr {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(125, 143, 155);
+    color: rgb(65, 64, 78);
+    padding: 15px;
+}
